@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- BOXICON IMPORT -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <title>Login | lessforus</title>
+</head>
+<body>
+    <!---------------------------- HEADER ---------------------------->
+    <!---------------------------------------------------------------->
+
+     <!-- SCROLL TOP -->
+     <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevron-up-circle'></i>
+    </a>
+
+    <!-- HEADER -->
+    <header id="header">
+        <!-- HAMBURGER ICON -->
+        <!-- <div class="menu_icon_area">
+            <a href="#nav" class="menu"><i class='bx bx-menu'></i></a>
+        </div> -->
+    
+        <!-- LOGO AREA -->
+        <div class="logo_area">
+            <h1 class="logo"><a href="index.html">Lessforus</a></h1>
+        </div>
+        
+        <!-- NAVIGATION -->
+        <nav id="nav">
+            <ul class="nav_list">
+                <li><a href="aboutus.html" class="nav_link">ABOUT US</a></li>
+                <li><a href="products.html" class="nav_link">PRODUCTS</a>
+                    <!-- <i class='bx bx-plus open_sublist'></i> -->
+                    <ul class="products_list">
+                        <li><a href="products.html#top" class="nav_link">전체</a></li>
+                        <li><a href="#" class="nav_link">욕실</a></li>
+                        <li><a href="#" class="nav_link">주방</a></li>
+                        <li><a href="#" class="nav_link">음료용품</a></li>
+                        <li><a href="#" class="nav_link">생활</a></li>
+                        <li><a href="#" class="nav_link">식품</a></li>
+                        <li><a href="#" class="nav_link">기타</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" class="nav_link">BLOG</a></li>
+                <li><a href="news.html" class="nav_link">NEWS</a></li>
+                <li><a href="contact.html" class="nav_link">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- SHOPPING ICONS -->
+        <div class="shop_icons">
+            <ul class="icon_list">
+                <li><a href="login.html" class="mypage"><i class='bx bxs-user'></i></a></li>
+                <li><a href="cart.html" class="cart"><i class='bx bxs-cart'></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="wrapper login">
+         <!-- 이미지 -->
+        <section class="login_image">
+            <img src="images/login/login2.jpg" alt="">
+        </section>
+        <section id="login">
+            <section class="title_section login">
+                <h1 class="login_title">로그인</h1>
+            </section>
+            <div class="tab login_tab">
+                <div class="tab_member active">
+                    <h2>회원</h2>
+                </div>
+                <div class="tab_guest">
+                    <h2>비회원</h2>
+                </div>
+            </div>
+            <div class="login_area">
+                <div class="member_login active">
+                    <form action="" class="form_login member">
+                        <p class="input_id">
+                            <label for="id">아이디</label>
+                            <input type="text" name="id" id="id" size="25">
+                        </p>
+                        <p class="input_password">
+                            <label for="password">비밀번호</label>
+                            <input type="password" name="password" id="password" size="25">
+                        </p>
+                        <p class="input_autoLogin">
+                            <input type="checkbox" name="autoLogin" id="autoLogin">
+                            <label>로그인 상태 유지</label>
+                        </p>
+                        <button type="submit" class="clrBtn loginBtn">로그인</button>
+                    </form>
+                </div>
+                <div class="guest_login">
+                    <form action="" class="form_login guest">
+                        <p>
+                            <label for="orderNo">주문번호</label>
+                            <input type="text" name="orderNo" id="orderNo" size="25">
+                        </p>
+                        <p>
+                            <label for="tel">연락처</label>
+                            <input type="text" name="tel" id="tel" size="2525">
+                        </p>
+                        <button type="submit" class="clrBtn loginBtn">로그인</button>
+                    </form>
+                </div>
+            </div>
+            <div class="memberInfo">
+                <ul>
+                    <li><a href="join2.html" class="link_join">회원가입</a></li>
+                    <li><a href="#" class="link_findID">아이디 찾기</a></li>
+                    <li><a href="#" class="link_findPassword">비밀번호 찾기</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!------------------------------ FOOTER ------------------------------>
+    <!-------------------------------------------------------------------->
+    <footer id="footer">
+        <!-- SUBSCRIBE AREA -->
+        <div class="subscribe">
+            <div class="subscribe_text">
+                <!-- <p class="tilte_eng">Subscribe</p> -->
+                <h3 class="tilte_kor">소식 받기</h3>
+                <p class="desc">소식을 구독하고 첫 구매 시 10% 할인 받으세요!</p>
+            </div>
+            <div class="input subscribe_input">
+                <input type="email" name="email" id="email">
+                <button type="submit" class="clrBtn">SUBMIT</button>
+            </div>
+            <!-- <div class="consent"></div> -->
+        </div>
+        <div class="info_area">
+            <div class="left">
+                <ul class="info_list">
+                    <li><p>주식회사 레스포어스</p></li>
+                    <li><p>대표 : 홍길동</p></li>
+                    <li><p>사업자등록번호 : 123-45-67890 <a href="#">사업자번호조회 ></a></p></li>
+                    <li><p>전화 : 02-1234-5678</p></li>
+                    <li><p>주소 : 서울시 종로구 종로1가 78</p></li>
+                    <li><p>개인정보관리자 : 홍길동</p></li>
+                    <li><p>메일 : lessforus@gmail.com</p></li>
+                </ul>
+                <p class="copyright">copyright &copy; 2022 lessforus.co.kr</p>
+            </div>
+            <div class="right">
+                <div class="logo">
+                    <a href="#">lessforus</a>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">개인정보 보호방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이용안내</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

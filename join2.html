@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- BOXICON IMPORT -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <title>회원가입 | lessforus</title>
+</head>
+<body>
+    <!---------------------------- HEADER ---------------------------->
+    <!---------------------------------------------------------------->
+
+     <!-- SCROLL TOP -->
+     <a href="index.html" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevron-up-circle'></i>
+    </a>
+
+    <!-- HEADER -->
+    <header id="header">
+        <!-- HAMBURGER ICON -->
+        <!-- <div class="menu_icon_area">
+            <a href="#nav" class="menu"><i class='bx bx-menu'></i></a>
+        </div> -->
+    
+        <!-- LOGO AREA -->
+        <div class="logo_area">
+            <h1 class="logo"><a href="#">Lessforus</a></h1>
+        </div>
+        
+        <!-- NAVIGATION -->
+        <nav id="nav">
+            <ul class="nav_list">
+                <li><a href="aboutus.html" class="nav_link">ABOUT US</a></li>
+                <li><a href="products.html" class="nav_link">PRODUCTS</a>
+                    <!-- <i class='bx bx-plus open_sublist'></i> -->
+                    <ul class="products_list">
+                        <li><a href="products.html#top" class="nav_link">전체</a></li>
+                        <li><a href="#" class="nav_link">욕실</a></li>
+                        <li><a href="#" class="nav_link">주방</a></li>
+                        <li><a href="#" class="nav_link">음료용품</a></li>
+                        <li><a href="#" class="nav_link">생활</a></li>
+                        <li><a href="#" class="nav_link">식품</a></li>
+                        <li><a href="#" class="nav_link">기타</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html" class="nav_link">BLOG</a></li>
+                <li><a href="news.html" class="nav_link">NEWS</a></li>
+                <li><a href="contact.html" class="nav_link">CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- SHOPPING ICONS -->
+        <div class="shop_icons">
+            <ul class="icon_list">
+                <li><a href="login.html" class="mypage"><i class='bx bxs-user'></i></a></li>
+                <li><a href="cart.html" class="cart"><i class='bx bxs-cart'></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!---------------------------- MAIN CONTENTS ---------------------------->
+    <!---------------------------------------------------------------->
+    <section class="title_section">
+        <h1 class="join_title">회원가입</h1>
+    </section>
+    <section id="join">
+        <div class="join_nav">
+            <ol>
+                <li>이용약관 및 개인정보 수집 및 이용 동의</li>
+                <li class="active">회원 정보 입력</li>
+                <li>회원 가입 완료</li>
+            </ol>
+        </div>
+        <div class="formSign_area">
+            <p class="formSign"><strong class="required"></strong>는 반드시 입력하여야 하는 항목입니다.</p>
+        </div>
+        <div class="join_form_area">
+            <form action="join.jsp" method="post" id="join_form" name="join_form">
+                <fieldset>
+                    <legend>회원 정보 입력</legend>
+                    <p>
+                        <label for="name">성명<strong class="required"></strong></label>
+                        <input type="text" id="name" name="name" placeholder="홍길동" required>
+                    </p>
+                    <p>
+                        <label for="id">아이디<strong class="required"></strong></label>
+                        <input type="text" id="id" name="id" placeholder="Guest" required>
+                        <a href="pop_idCheck.html" class="idCheck clrBtn">ID 중복확인</a>
+                    </p>
+                    <p>
+                        <label for="pw">암호<strong class="required"></strong></label>
+                        <input type="password" name="pw" id="pw" placeholder="영문/숫자 4~8자 이내" required>
+                    </p>
+                    <p>
+                        <label for="pwConfirm">암호 확인<strong class="required"></strong></label>
+                        <input type="password" name="pwConfirm" id="pwConfirm" required>
+                    </p>
+                    <p class="address_area">
+                        <label for="address" class="labelAddress">주소</label>
+                        <input type="tel" id="zipcode" name="ziqcode" maxlength="5" size="6" placeholder="12345">
+                        <a href="find_zipcode.html" class="findZipcode clrBtn">우편번호 찾기</a>
+                        <input type="text" id="address" name="address" maxlength="100" size="60" placeholder="입력 예) 서울시 종로구 관철동 11번지">
+                    </p>
+                    <p>
+                        <label for="tel">연락처</label>
+                        <input type="tel" name="tel" id="tel" maxlength="11" size="20" title="하이픈(-)은 입력할 수 없습니다." placeholder="입력 예) 01012345678">
+                    </p>
+                    <p>
+                        <label for="email">이메일<strong class="required"></strong></label>
+                        <input type="email" name="email" id="email" size="30" placeholder="입력 예) honggildong@gmail.com" required>
+                    </p>
+                    <p class="mailing">
+                        <em>소식 구독 동의</em>
+                        <span>소식 구독에 동의하시면 다양한 소식을 받아보실 수 있습니다.</span><br>
+                        <input type="radio" name="mailing" id="mailingYes" value="yes" checked><label class="mailing_label" for="mailingYes"> 예</label>
+                        <input type="radio" name="mailing" id="mailingNo" value="no" checked><label class="mailing_label" for="mailingNo"> 아니오</label>
+
+                    </p>
+                    <div class="button_area">
+                        <button type="reset" class="monoBtn cancel">취소</button>
+                        <button type="submit" class="clrFilledBtn join">가입하기</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+    <!------------------------------ FOOTER ------------------------------>
+    <!-------------------------------------------------------------------->
+    <footer id="footer">
+        <!-- SUBSCRIBE AREA -->
+        <div class="subscribe">
+            <div class="subscribe_text">
+                <!-- <p class="tilte_eng">Subscribe</p> -->
+                <h3 class="tilte_kor">소식 받기</h3>
+                <p class="desc">소식을 구독하고 첫 구매 시 10% 할인 받으세요!</p>
+            </div>
+            <div class="input subscribe_input">
+                <input type="email" name="email" id="email">
+                <button type="submit" class="clrBtn">SUBMIT</button>
+            </div>
+            <!-- <div class="consent"></div> -->
+        </div>
+        <div class="info_area">
+            <div class="left">
+                <ul class="info_list">
+                    <li><p>주식회사 레스포어스</p></li>
+                    <li><p>대표 : 홍길동</p></li>
+                    <li><p>사업자등록번호 : 123-45-67890 <a href="#">사업자번호조회 ></a></p></li>
+                    <li><p>전화 : 02-1234-5678</p></li>
+                    <li><p>주소 : 서울시 종로구 종로1가 78</p></li>
+                    <li><p>개인정보관리자 : 홍길동</p></li>
+                    <li><p>메일 : lessforus@gmail.com</p></li>
+                </ul>
+                <p class="copyright">copyright &copy; 2022 lessforus.co.kr</p>
+            </div>
+            <div class="right">
+                <div class="logo">
+                    <a href="#">lessforus</a>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">개인정보 보호방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이용안내</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
