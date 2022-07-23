@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@600;700&family=Ibarra+Real+Nova&family=Literata:ital,opsz,wght@0,7..72,200;0,7..72,300;0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;0,7..72,800;0,7..72,900;1,7..72,900&family=Lobster&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
+
+/* ===== VARIABLES CSS ===== */
+:root {
+    --logo-font: 'Lobster', cursive;
+    --nav-font: 'Noto Sans KR', sans-serif;
+    --mv-font: 'Literata', serif;
+    --accent-font: 'Playfair Display', serif;
+
+    /* ===== Colors ===== */
+    --main-color: #308722;
+    --main-color-dark: #0c5102;
+    --main-color-light-1: #91B584;
+    --main-color-light-2: #CDEAC1;
+    --gray-color-1: #f0f0f0;
+    --gray-color-2: #cccccc;
+    --gray-color-3: #5c5c5c;
+    --body-color: #FFFDF8;
+    --header-color: #FAECCA;
+    --text-color: #252525;
+    --text-color-light: #8f8a8a;
+
+    /* ===== Font and typography ===== */
+    --body-font: 'Noto Sans KR', sans-serif;
+    --eng-title-font-size: 80px;
+    --biggest-font-size: 2.5rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.2rem;
+    --h4-font-size: 1.1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --extra-small-font-size: .65em;
+
+    /* ===== Font weight ===== */
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* ===== Margins ===== */
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+    --mb-4: 2rem;
+    --mb-5: 2.5rem;
+    --mb-6: 3rem;
+    --mb-7: 3.5rem;
+    --mb-8: 4rem
+
+    /* ===== z-index ===== */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/* ===== BASE ===== */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--body-font);
+    overflow-x: hidden;
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==================== BUTTONS ==================== */
+.clrBtn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--main-color-dark);
+    border: 1px solid var(--main-color-dark);
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+}
+
+.clrBtn:hover {
+    background-color: var(--main-color-dark);
+    color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.clrRvsBtn {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+}
+
+.clrRvsBtn:hover {
+    background-color: #fff;
+    color: var(--main-color-dark);
+    border: 1px solid var(--main-color-dark);
+    cursor: pointer;
+}
+
+.clrFilledBtn {
+    display: inline-block;
+    background-color: var(--main-color-dark);
+    color: #fff;
+    border: 1px solid transparent;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+}
+
+.monoBtn {
+    display: inline-block;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+}
+
+.monoBtn:hover {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.monoRvsBtn {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 3rem;
+}
+
+.monoRvsBtn:hover {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+/* ==================== TAGS ==================== */
+.tag {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--main-color-dark);
+    border: 1px solid var(--main-color-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+}
+
+/* ==================== ARROWS ==================== */
+svg.LEFT {
+    width: 70px;
+    overflow: visible;
+    transform: rotate(180deg);
+    color: var(--main-color-dark);
+}
+
+svg.RIGHT {
+    width: 70px;
+    overflow: visible;
+    color: var(--main-color-dark);
+}
+
+/* ==================== SCROLL TOP ==================== */
+/* Scroll top */
+.scrolltop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background: rgba(20, 70, 12, 0.33);
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    visibility: hidden;
+}
+
+.scrolltop:hover {
+    background-color: var(--main-color-dark);
+}
+
+.scrolltop__icon {
+    font-size: 1.5rem;
+    color: var(--body-color);
+}
+
+.show-scroll {
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
+/* ==================== HEADER ==================== */
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    margin-left: 1.6rem;
+    font-size: var(--biggest-font-size);
+}
+
+#header .logo_area .logo {
+    font-family: var(--logo-font);
+}
+
+.logo > a {
+    color: var(--main-color-dark);
+}
+
+/* ===== NAV ===== */
+#nav {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#nav .nav_list {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_list > li {
+    margin: 10px 60px;
+    justify-content: space-evenly;
+}
+
+.nav_list a {
+    box-sizing: content-box;
+    padding: 0.4rem 0.1rem;
+    font-family: var(--nav-font);
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    color: var(--main-color-dark);
+    white-space: nowrap;
+}
+
+.nav_list a:hover {
+    border-bottom: 2px solid var(--main-color-dark);
+    transition: border-bottom .4s;
+}
+
+.products_list {
+    display: none;
+}
+
+.shop_icons {
+    display: flex;
+}
+
+.icon_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon_list i {
+    margin-right: 1.75rem;
+    font-size: 24px;
+    color: var(--main-color-dark);
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    width: 100%;
+    background-color: var(--header-color);
+}
+
+/* 구독 영역 */
+.subscribe {
+    padding: 2rem 0 0 0;
+    margin: 0 auto 1rem;
+    width: 90%;
+    display: flex;
+    border-bottom: 1px solid var(--main-color-dark);
+}
+
+.subscribe_text {
+    width: 50%;
+    color: var(--main-color-dark);
+}
+
+.subscribe h3 {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.subscribe h3::before {
+    content: "Subscribe";
+    font-family: var(--accent-font);
+    font-size: var(--biggest-font-size);
+    margin: 0 1rem 0 0;
+}
+
+.subscribe .desc {
+    font-size: var(--normal-font-size);
+}
+
+.subscribe_input {
+    width: 50%;
+    line-height: 7;
+}
+
+.subscribe_input > input {
+    display: inline-block;
+    padding: .8rem .5rem .8rem 1.2rem;
+    margin-right: .5rem;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    width: 73%;
+}
+
+.subscribe_input > button {
+    display: inline-block;
+    width: 20%;
+}
+
+.info_area {
+    box-sizing: content-box;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 0 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info_area.left {
+    width: 600px;
+}
+
+.info_list {
+    padding: 0;
+    font-size: var(--small-font-size);
+}
+
+.info_list p, .info_list a {
+    color: var(--main-color-dark);
+}
+
+.copyright {
+    font-size: var(--small-font-size);
+    color: var(--main-color-dark);
+}
+
+.right .logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.right .logo > a {
+    font-family: var(--logo-font);
+}
+    
+.links > ul {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--small-font-size);
+}
+
+.links a {
+    color: var(--main-color-dark);
+}
+
+
