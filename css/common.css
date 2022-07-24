@@ -46,7 +46,7 @@
     --mb-5: 2.5rem;
     --mb-6: 3rem;
     --mb-7: 3.5rem;
-    --mb-8: 4rem
+    --mb-8: 4rem;
 
     /* ===== z-index ===== */
     --z-tooltip: 10;
@@ -180,25 +180,24 @@ svg.RIGHT {
 .scrolltop {
     position: fixed;
     right: 1rem;
-    bottom: -20%;
+    bottom: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: .3rem;
-    background: rgba(20, 70, 12, 0.33);
     border-radius: .4rem;
     z-index: var(--z-tooltip);
     transition: .4s;
-    visibility: hidden;
-}
-
-.scrolltop:hover {
-    background-color: var(--main-color-dark);
+    visibility: visible;
 }
 
 .scrolltop__icon {
-    font-size: 1.5rem;
-    color: var(--body-color);
+    font-size: var(--biggest-font-size);
+    color: #fff;
+}
+
+.scrolltop_icon:hover {
+    color: var(--main-color-dark);
 }
 
 .show-scroll {

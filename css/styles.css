@@ -23,10 +23,6 @@
     width: 100%;
 }
 
-#main_section {
-    display: flex;
-}
-
 .title_section.products {
     padding-bottom: var(--mb-4);
     background-color: var(--main-color-light-2);
@@ -50,6 +46,10 @@
     color: var(--main-color-dark);
 }
 
+#main_section {
+    display: flex;
+}
+
 /* ==================== CATEGORY ==================== */
 #sidenav {
     width: 20%;
@@ -59,31 +59,71 @@
     width: 80%;
     margin: 1.5rem auto;
     text-transform: uppercase;
+    letter-spacing: .5rem;
     font-size: var(--h4-font-size);
+    font-weight: 400;
     color: var(--main-color-dark);
 }
 
-.category.all {
-    width: 80%;
+#sidenav li:hover {
+    background-color: var(--main-color-light-2);
 }
+
+.category.all {
+    width: 70%;
+}
+
+.category.all > li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-color-2);
+}
+
+.category.products {
+    width: 70%;
+}
+
+.category.products > li{
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--gray-color-2);
+}
+
+#sidnav a {
+    padding-left: 1rem;
+}
+
+.quantity {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
 /* ==================== PRODUCTS LIST ==================== */
 #products_section {
-    border: 1px solid #000;
     width: 80%;
     margin: 0 auto;
+}
+
+.filter {
+    width: 95%;
+    margin: 0 auto;
+
 }
 
 .filter > ul {
     display: flex;
     justify-content: flex-end;
-    position: relative;
-    right: 0;
-    margin: 1rem 1.5rem 1rem 0;
+}
+
+.filter li {
+    margin: 1rem 2rem 1rem 0;
+    font-size: var(--small-font-size);
+}
+
+.filter > ul > li:last-child {
+    margin-right: 0;
 }
 
 #products_section .products_list {
-    border: 1px solid #000;
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -92,6 +132,7 @@
 
 .product_item {
     width: 33%;
+    margin-bottom: var(--mb-6);
 }
 
 .product_image {
@@ -109,9 +150,14 @@
     justify-content: space-around;
 }
 
+.page_nav li {
+    color: var(--gray-color-2);
+}
+
 .page_nav .active {
     font-weight: 500;
     color: var(--main-color-dark);
+    text-decoration: underline 1px var(--main-color-dark);
 }
 
 
@@ -124,11 +170,14 @@
 
 section.login_image {
     width: 50%;
+    background: url(/lessforus/images/login/login.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-section.login_image > img {
+/* section.login_image > img {
     width: 100%;
-}
+} */
 
 section#login {
     width: 50%;

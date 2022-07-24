@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
     <!-- BOXICON IMPORT -->
@@ -15,9 +16,9 @@
     <!---------------------------- HEADER ---------------------------->
     <!---------------------------------------------------------------->
 
-     <!-- SCROLL TOP -->
-     <a href="index.html" class="scrolltop" id="scroll-top">
-        <i class='bx bxs-chevron-up-circle'></i>
+    <!-- SCROLL TOP -->
+    <a href="index.html" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevron-up-circle scrolltop__icon'></i>
     </a>
 
     <!-- NAVIGATION BANNER -->
@@ -229,13 +230,13 @@
                         <path id="RIGHT" d="M 1 26 L 65.34849548339844 26 L 56.05778121948242 32.29299926757812 L 58.14535522460938 33.70700073242188 L 71 25 L 58.14535522460938 16.29299926757812 L 56.05778121948242 17.70699882507324 L 65.34849548339844 24 L 1 24 L 1 26 Z"></path></svg>
                     </a>
                 </div>
-  
         </section>
 
         <!------------- ABOUT US SECTION ------------->
         <section class="section aboutUs_section">
-            <img src="images/index/about_us.jpg" alt="" class="aboutUs_img">
-            <div class="shadowBox"></div>
+            <div class="aboutUs image_area">
+                <img src="images/index/main_visual_1.jpg" alt="" class="aboutUs_img">
+            </div>
             <div class="aboutUs textbox">
                 <!-- <p class="tilte_eng">About Us</p> -->
                 <h3 class="tilte_kor">레스포어스는</h3>
@@ -243,16 +244,43 @@
                 <button href="aboutus.html" class="clrRvsBtn">READ MORE</button>
             </div>
             <div class="movingText">
-                <p>Produce Less. Use Less. Less for us. Less for earth. Produce Less. Use Less. Less for us. Less for earth. Produce Less. Use Less. Less for us. Less for earth. Produce Less. Use Less. Less for us. Less for earth. Produce Less. Use Less. Less for us. Less for earth. Produce Less. Use Less. Less for us. Less for earth. Produce Less. Use Less. Less for us. Less for earth. Produce Less. Use Less. Less for us. Less for earth. Produce Less. Use Less. Less for us. Less for earth.</p>
+                <p>Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us.</p>
             </div>
         </section>
 
-        <!------------- STORE SECTION ------------->
-        <section class="section store_section">
-            <h3>오프라인 매장 안내</h3>
-            <p class="text store_text">지구를 위한, 사람을 위한 제로웨이스트샵 lessforus<br>
-                제로웨이스트가 일상 생활에 어떻게 스며들 수 있는지 한 눈에 확인할 수 있는 오프라인 매장에 방문해 보세요</p>
-            <button href="#" class="monoRvsBtn">READ MORE</button>
+        <!------------- OUR MISSION SECTION ------------->
+        <section class="section ourMission_section">
+            <div class="title ourMission_title">
+                <!-- <p class="title_eng">Our Mission</p> -->
+                <h3 class="title_kor">우리의 미션</h3>
+            </div>
+            <div class="card_area">
+                <div class="card card1">
+                    <img src="images/index/mission01.png" alt="플라스틱컵" class="icon mission_icon">
+                    <h4 class="mission_title">
+                        우리가 줄인 플라스틱 제품
+                    </h4>
+                    <p class="mission_number_text">32,608kg</p>
+                </div>
+                <div class="card card2">
+                    <img src="images/index/mission02.png" alt="재활용" class="icon mission_icon">
+                    <h4 class="mission_title">
+                        우리가 순환한 자원의 양
+                    </h4>
+                    <p class="mission_number_text">15,328kg</p>
+                    
+                </div>
+                <div class="card card3">
+                    <img src="images/index/mission03.png" alt="자원" class="icon mission_icon">
+                    <h4 class="mission_title">
+                        사회, 환경적 활동 지원 금액
+                    </h4>
+                    <p class="mission_number_text">11,345,390원</p>
+                </div>
+            </div>
+            <div class="updateDate_area">
+                <p class="update_date">* 2022년 7월 기준</p>
+            </div>
         </section>
 
         <!------------- BLOG SECTION ------------->
@@ -323,7 +351,7 @@
                     <!-- <p class="title_eng">NEWS</p> -->
                     <h3 class="title_kor">새소식</h3>
                 </div>
-                <button class="clrBtn" href="news.html">READ MORE</button>
+                <button class="clrRvsBtn" href="news.html">READ MORE</button>
             </div>
             <div class="news_list">
                 <ul>
@@ -381,6 +409,14 @@
             <div class="button_area">
                 <button class="clrBtn" href="#">@ FOLLOW</button>
             </div>
+        </section>
+
+        <!------------- STORE SECTION ------------->
+        <section class="section store_section">
+            <h3>오프라인 매장 안내</h3>
+            <p class="text store_text">지구를 위한, 사람을 위한 제로웨이스트샵 lessforus<br>
+                제로웨이스트가 일상 생활에 어떻게 스며들 수 있는지 한 눈에 확인할 수 있는 오프라인 매장에 방문해 보세요</p>
+            <button href="#" class="monoRvsBtn">READ MORE</button>
         </section>
 
         <!------------- CONTACT SECTION ------------->
