@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- BOXICON IMPORT -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <!-- SCROLL REVEAL IMPORT -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Products | lessforus</title>
 </head>
 <body>
     <!---------------------------- HEADER ---------------------------->
     <!---------------------------------------------------------------->
 
-     <!-- SCROLL TOP -->
-     <a href="#" class="scrolltop" id="scroll-top">
-        <i class='bx bxs-chevron-up-circle'></i>
+    <!-- SCROLL TOP -->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevron-up-circle scrolltop_icon'></i>
     </a>
 
     <!-- HEADER -->
@@ -30,7 +31,7 @@
     
         <!-- LOGO AREA -->
         <div class="logo_area">
-            <h1 class="logo"><a href="index.html"><span id="logo_less">less</span>for<span id="logo_us">us</span></a></h1>
+            <h1 class="logo"><a href="index.html">Lessforus</a></h1>
         </div>
         
         <!-- NAVIGATION -->
@@ -39,7 +40,7 @@
                 <li><a href="aboutus.html" class="nav_link">ABOUT US</a></li>
                 <li><a href="products.html" class="nav_link">PRODUCTS</a>
                     <!-- <i class='bx bx-plus open_sublist'></i> -->
-                    <ul class="products_list">
+                    <!-- <ul class="products_list">
                         <li><a href="products.html#top" class="nav_link">전체</a></li>
                         <li><a href="#" class="nav_link">욕실</a></li>
                         <li><a href="#" class="nav_link">주방</a></li>
@@ -47,11 +48,11 @@
                         <li><a href="#" class="nav_link">생활</a></li>
                         <li><a href="#" class="nav_link">식품</a></li>
                         <li><a href="#" class="nav_link">기타</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li><a href="blog.html" class="nav_link">BLOG</a></li>
-                <li><a href="news.html" class="nav_link">NEWS</a></li>
-                <li><a href="contact.html" class="nav_link">CONTACT</a></li>
+                <li><a href="#" class="nav_link">BLOG</a></li>
+                <li><a href="#" class="nav_link">NEWS</a></li>
+                <li><a href="#" class="nav_link">CONTACT</a></li>
             </ul>
         </nav>
         <!-- SHOPPING ICONS -->
@@ -61,6 +62,7 @@
                 <li><a href="cart.html" class="cart"><i class='bx bxs-cart'></i></a></li>
             </ul>
         </div>
+        
     </header>
 
     <!------------------------------ CONTENTS ------------------------------>
@@ -76,16 +78,16 @@
                 <h2 class="category_title">Category</h2>
                 <ul class="category all">
                     <li><a href="#">전체<span class="quantity"> (98)</span></a></li>
-                    <li><a href="#newarrivals">신상품<span class="quantity"> (6)</span></a></li>
-                    <li><a href="#bestsellers">인기상품<span class="quantity"> (12)</span></a></li>
+                    <li><a href="#">신상품<span class="quantity"> (6)</span></a></li>
+                    <li><a href="#">인기상품<span class="quantity"> (12)</span></a></li>
                 </ul>
                 <ul class="category products">
-                    <li><a href="#">욕실<span class="quantity"> (22)</span></a></li>
-                    <li><a href="#">주방<span class="quantity"> (28)</span></a></li>
-                    <li><a href="#">음료용품<span class="quantity"> (12)</span></a></li>
-                    <li><a href="#">생활<span class="quantity"> (15)</span></a></li>
-                    <li><a href="#">식품<span class="quantity"> (16)</span></a></li>
-                    <li><a href="#">기타<span class="quantity"> (5)</span></a></li>
+                    <li><a href="#bathroom">욕실<span class="quantity"> (22)</span></a></li>
+                    <li><a href="#kitchen">주방<span class="quantity"> (28)</span></a></li>
+                    <li><a href="#drink">음료용품<span class="quantity"> (12)</span></a></li>
+                    <li><a href="#living">생활<span class="quantity"> (15)</span></a></li>
+                    <li><a href="#foods">식품<span class="quantity"> (16)</span></a></li>
+                    <li><a href="#etc">기타<span class="quantity"> (5)</span></a></li>
                 </ul>
             </aside>
             <!------------- PRODUCTS LIST ------------->
@@ -100,60 +102,93 @@
                 </div>
                 <div class="products_list">
                     <div class="product_item">
-                        <img src="images/products/product1.jpg" alt="" class="product_image">
-                        <p class="product_name">오리지널 고체 치약</p>
-                        <p class="product_price">15,000원</p>
-                        <div class="tag_area">
-
-                        </div>
+                        <a href="product_detail.html" class="product_link">
+                            <div class="product_image_wrap">
+                                <img src="images/index/product1.jpg" alt="유기농 다크 초콜릿" class="product_image">
+                            </div>
+                            <p class="product_name">유기농 다크 초콜릿</p>
+                            <p class="product_price">9,000원</p>
+                            <div class="tag_area">
+                                <span class="tag tag_vegan">Vegan</span>
+                                <span class="tag tag_nonGMO">Non-GMO</span>
+                                <span class="tag tag_organic">Organic</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="product_item">
-                        <img src="images/products/product2.jpg" alt="" class="product_image">
-                        <p class="product_name">오리지널 고체 치약</p>
-                        <p class="product_price">15,000원</p>
-                        <div class="tag_area">
-
-                        </div>
+                        <a href="product_detail.html" class="product_link">
+                            <div class="product_image_wrap">
+                                <img src="images/index/product2.jpg" alt="생캐슈넛 (500g)" class="product_image">
+                            </div>
+                            <p class="product_name">생캐슈넛 (500g)</p>
+                            <p class="product_price">15,000원</p>
+                            <div class="tag_area">
+                                <span class="tag tag_vegan">Vegan</span>
+                                <span class="tag tag_organic">Organic</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="product_item">
-                        <img src="images/products/product3.jpg" alt="" class="product_image">
-                        <p class="product_name">오리지널 고체 치약</p>
-                        <p class="product_price">15,000원</p>
-                        <div class="tag_area">
-
-                        </div>
+                        <a href="product_detail.html" class="product_link">
+                            <div class="product_image_wrap">
+                                <img src="images/index/product3.jpg" alt="커피 원두 (500g)" class="product_image">
+                            </div>
+                            <p class="product_name">커피 원두 (500g)</p>
+                            <p class="product_price">18,000원</p>
+                            <div class="tag_area">
+                                <span class="tag tag_vegan">Vegan</span>
+                                <span class="tag tag_nonGMO">Non-GMO</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="product_item">
-                        <img src="images/products/product4.jpg" alt="" class="product_image">
-                        <p class="product_name">오리지널 고체 치약</p>
-                        <p class="product_price">15,000원</p>
-                        <div class="tag_area">
-
-                        </div>
+                        <a href="product_detail.html" class="product_link">
+                            <div class="product_image_wrap">
+                                <img src="images/index/product4.jpg" alt="우드 트레이" class="product_image">
+                            </div>
+                            <p class="product_name">우드 트레이</p>
+                            <p class="product_price">28,000원</p>
+                            <div class="tag_area">
+                                <span class="tag tag_organic">Organic</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="product_item">
-                        <img src="./images/products/product5.jpg" alt="" class="product_image">
-                        <p class="product_name">오리지널 고체 치약</p>
-                        <p class="product_price">15,000원</p>
-                        <div class="tag_area">
-
-                        </div>
+                        <a href="product_detail.html" class="product_link">
+                            <div class="product_image_wrap">
+                                <img src="images/index/product5.jpg" alt="마시멜로" class="product_image">
+                            </div>
+                            <p class="product_name">마시멜로</p>
+                            <p class="product_price">10,000원</p>
+                            <div class="tag_area">
+                                <span class="tag tag_vegan">Vegan</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="product_item">
-                        <img src="images/products/product6.jpg" alt="" class="product_image">
-                        <p class="product_name">오리지널 고체 치약</p>
-                        <p class="product_price">15,000원</p>
-                        <div class="tag_area">
-
-                        </div>
+                        <a href="product_detail.html" class="product_link">
+                            <div class="product_image_wrap">
+                                <img src="images/index/product6.jpg" alt="화장솜" class="product_image">
+                            </div>
+                            <p class="product_name">화장솜</p>
+                            <p class="product_price">7,00원</p>
+                            <div class="tag_area">
+                                <span class="tag tag_organic">Organic</span>
+                            </div>
+                        </a>
                     </div>
                     <div class="product_item">
-                        <img src="images/products/product7.jpg" alt="" class="product_image">
-                        <p class="product_name">오리지널 고체 치약</p>
-                        <p class="product_price">15,000원</p>
-                        <div class="tag_area">
-
-                        </div>
+                        <a href="product_detail.html" class="product_link">
+                            <div class="product_image_wrap">
+                                <img src="images/index/product8.jpg" alt="막대사탕" class="product_image">
+                            </div>
+                            <p class="product_name">막대사탕</p>
+                            <p class="product_price">3,000원</p>
+                            <div class="tag_area">
+                                <span class="tag tag_organic">Organic</span>
+                                <span class="tag tag_vegan">Vegan</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="page_nav">
@@ -170,7 +205,8 @@
             </section>
         </section>
     </div>
-    <!------------------------------ FOOTER ------------------------------>
+
+        <!------------------------------ FOOTER ------------------------------>
     <!-------------------------------------------------------------------->
     <footer id="footer">
         <!-- SUBSCRIBE AREA -->
@@ -181,8 +217,14 @@
                 <p class="desc">소식을 구독하고 첫 구매 시 10% 할인 받으세요!</p>
             </div>
             <div class="input subscribe_input">
-                <input type="email" name="email" id="email">
-                <button type="submit" class="clrBtn">SUBMIT</button>
+                <form class="subscribe_form">
+                    <input type="email" name="email" id="email" required>
+                    <p class="consent">
+                        <input type="checkbox" name="subscribe_consent" id="subscribe_consent" required>
+                        <label for="subscribe_consent">개인 정보 제공에 동의합니다.</label>
+                    </p>
+                    <button type="submit" class="clrBtn">SUBMIT</button>
+                </form>
             </div>
             <!-- <div class="consent"></div> -->
         </div>
@@ -214,5 +256,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
 </body>
 </html>

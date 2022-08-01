@@ -28,7 +28,7 @@
     --eng-title-font-size: 80px;
     --biggest-font-size: 2.5rem;
     --h2-font-size: 2rem;
-    --h3-font-size: 1.2rem;
+    --h3-font-size: 1.4rem;
     --h4-font-size: 1.1rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
@@ -54,7 +54,6 @@
 }
 
 /* ===== BASE ===== */
-
 body {
     margin: 0;
     padding: 0;
@@ -162,17 +161,17 @@ ul {
 }
 
 /* ==================== ARROWS ==================== */
-svg.LEFT {
+svg.left {
     width: 70px;
     overflow: visible;
     transform: rotate(180deg);
-    color: var(--main-color-dark);
+    fill: var(--main-color-dark);
 }
 
-svg.RIGHT {
+svg.right {
     width: 70px;
     overflow: visible;
-    color: var(--main-color-dark);
+    fill: var(--main-color-dark);
 }
 
 /* ==================== SCROLL TOP ==================== */
@@ -188,12 +187,12 @@ svg.RIGHT {
     border-radius: .4rem;
     z-index: var(--z-tooltip);
     transition: .4s;
-    visibility: visible;
+    visibility: hidden;
 }
 
-.scrolltop__icon {
+.scrolltop_icon {
     font-size: var(--biggest-font-size);
-    color: #fff;
+    color: var(--main-color-light-1);
 }
 
 .scrolltop_icon:hover {
@@ -202,18 +201,62 @@ svg.RIGHT {
 
 .show-scroll {
     visibility: visible;
-    bottom: 1.5rem;
+    bottom: 1rem;
+}
+
+/* NAVIGATION BANNER */
+.nav_banner_area {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem auto;
+    background-color: #D2C2E5;
+}
+
+.nav_banner_area p {
+    font-size: 0.8rem;
+}
+
+.nav_banner_area a.close {
+    height: 16px;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+.bx-x:hover {
+    cursor: pointer;
+}
+
+.scroll_navBanner {
+    height: 40px;
+    position: fixed;
+    z-index: var(--z-fixed);
 }
 
 /* ==================== HEADER ==================== */
 #header {
     width: 100%;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.scroll_header {
+    height: 80px;
+    top: 0;
+    background-color: rgba(255, 253, 247, 0.761);
+    box-shadow: 0 1px 4px rgba(167, 157, 134, 0.779);
+    position: fixed;
+    z-index: 1000;
+}
+
 /* ===== LOGO ===== */
+
 .logo {
     margin-left: 1.6rem;
     font-size: var(--biggest-font-size);
@@ -238,11 +281,11 @@ svg.RIGHT {
 #nav .nav_list {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .nav_list > li {
     margin: 10px 60px;
-    justify-content: space-evenly;
 }
 
 .nav_list a {
@@ -257,7 +300,8 @@ svg.RIGHT {
     white-space: nowrap;
 }
 
-.nav_list a:hover {
+.nav_list li:hover a{
+    font-weight: 400;
     border-bottom: 2px solid var(--main-color-dark);
     transition: border-bottom .4s;
 }
@@ -282,6 +326,16 @@ svg.RIGHT {
     color: var(--main-color-dark);
 }
 
+i.bxs-user:hover {
+    font-size: 26px;
+    transition: all .3s;
+}
+
+i.bxs-cart:hover {
+    font-size: 26px;
+    transition: all .3s;
+}
+
 /* ==================== FOOTER ==================== */
 footer {
     width: 100%;
@@ -291,7 +345,7 @@ footer {
 /* 구독 영역 */
 .subscribe {
     padding: 2rem 0 0 0;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
     width: 90%;
     display: flex;
     border-bottom: 1px solid var(--main-color-dark);
@@ -323,13 +377,44 @@ footer {
     line-height: 7;
 }
 
-.subscribe_input > input {
+.subscribe_form {
+    position: relative;
+}
+
+.subscribe_input input {
     display: inline-block;
     padding: .8rem .5rem .8rem 1.2rem;
     margin-right: .5rem;
     border: 1px solid #ccc;
     border-radius: 2rem;
     width: 73%;
+}
+
+input#subscribe_consent {
+    width: 20px;
+    margin: 0 .5rem 0 0;
+    position: relative;
+    top: 31px;
+}
+
+p.consent {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    visibility: hidden;
+}
+
+p.consent.active {
+    visibility: visible;
+}
+
+p.consent > label {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    font-size: var(--small-font-size);
 }
 
 .subscribe_input > button {

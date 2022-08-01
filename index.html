@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/index.css">
     <!-- BOXICON IMPORT -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <!-- SCROLL REVEAL IMPORT -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>lessforus</title>
 </head>
 <body>
@@ -17,14 +18,14 @@
     <!---------------------------------------------------------------->
 
     <!-- SCROLL TOP -->
-    <a href="index.html" class="scrolltop" id="scroll-top">
-        <i class='bx bxs-chevron-up-circle scrolltop__icon'></i>
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevron-up-circle scrolltop_icon'></i>
     </a>
 
     <!-- NAVIGATION BANNER -->
     <div class="nav_banner_area">
         <p class="change_banner_text">50,000원 이상 구매 시 무료 배송!</p>
-        <a class="close" onclick="closeNavBanner();"><i class='bx bx-x' onclick="closeNavBanner();"></i></a>
+        <a class="close"><i class='bx bx-x'></i></a>
     </div>
 
     <!-- HEADER -->
@@ -45,7 +46,7 @@
                 <li><a href="aboutus.html" class="nav_link">ABOUT US</a></li>
                 <li><a href="products.html" class="nav_link">PRODUCTS</a>
                     <!-- <i class='bx bx-plus open_sublist'></i> -->
-                    <ul class="products_list">
+                    <!-- <ul class="products_list">
                         <li><a href="products.html#top" class="nav_link">전체</a></li>
                         <li><a href="#" class="nav_link">욕실</a></li>
                         <li><a href="#" class="nav_link">주방</a></li>
@@ -53,20 +54,21 @@
                         <li><a href="#" class="nav_link">생활</a></li>
                         <li><a href="#" class="nav_link">식품</a></li>
                         <li><a href="#" class="nav_link">기타</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li><a href="blog.html" class="nav_link">BLOG</a></li>
-                <li><a href="news.html" class="nav_link">NEWS</a></li>
-                <li><a href="contact.html" class="nav_link">CONTACT</a></li>
+                <li><a href="#" class="nav_link">BLOG</a></li>
+                <li><a href="#" class="nav_link">NEWS</a></li>
+                <li><a href="#" class="nav_link">CONTACT</a></li>
             </ul>
         </nav>
         <!-- SHOPPING ICONS -->
         <div class="shop_icons">
             <ul class="icon_list">
                 <li><a href="login.html" class="mypage"><i class='bx bxs-user'></i></a></li>
-                <li><a href="cart.html" class="cart"><i class='bx bxs-cart'></i></a></li>
+                <li><a href="#" class="cart"><i class='bx bxs-cart'></i></a></li>
             </ul>
         </div>
+        
     </header>
 
     <!------------------------------ CONTENTS ------------------------------>
@@ -74,9 +76,7 @@
     <div class="wrapper">
         <!------------- MV SECTION------------->
         <section class="section mv_section">
-            <div class="mv_area">
-                
-            </div>
+            <div class="mv_area"></div>
             <div class="mv_text_area">
                 <h2>Produce less.<br>Use less.<br>Less for earth.<br>Less for us.</h2>
                 <p>지구를 위한, 우리를 위한 제로웨이스트샵</p>
@@ -88,16 +88,12 @@
         <section class="section products_section">
             <div class="products_tabs">
                 <div class="tab_title newArrivals active">
-                    <a href="#newArrivals" class="active">
-                        <!-- <p class="tilte_eng">New Arrivals</p> -->
-                        <h3 class="tilte_active">신상품</h3>
-                    </a>
+                    <!-- <p class="tilte_eng">New Arrivals</p> -->
+                    <h3 class="title active">신상품</h3>
                 </div>
                 <div class="tab_title bestsellers">
-                    <a href="#bestsellers">
-                        <!-- <p class="tilte_eng">Bestsellers</p> -->
-                        <h3 class="tilte_kor">인기상품</h3>
-                    </a>
+                    <!-- <p class="tilte_eng">Bestsellers</p> -->
+                    <h3 class="title">인기상품</h3>
                 </div>
             </div>
                 <div class="product_list newArrivals" id="newArrivals">
@@ -105,53 +101,88 @@
                         <div class="product_item">
                             <a href="product_detail.html" class="product_link">
                                 <div class="product_image_wrap">
-                                    <img src="images/index/product1.jpg" alt="" class="product_image">
+                                    <img src="images/index/product1.jpg" alt="유기농 다크 초콜릿" class="product_image">
                                 </div>
                                 <p class="product_name">유기농 다크 초콜릿</p>
                                 <p class="product_price">9,000원</p>
                                 <div class="tag_area">
-                                    <button class="tag tag_vegan">Vegan</button>
-                                    <button class="tag tag_nonGMO">Non-GMO</button>
-                                    <button class="tag tag_organic">Organic</button>
+                                    <span class="tag tag_vegan">Vegan</span>
+                                    <span class="tag tag_nonGMO">Non-GMO</span>
+                                    <span class="tag tag_organic">Organic</span>
                                 </div>
                             </a>
                         </div>
                         <div class="product_item">
                             <a href="product_detail.html" class="product_link">
                                 <div class="product_image_wrap">
-                                    <img src="images/index/product2.jpg" alt="" class="product_image">
+                                    <img src="images/index/product2.jpg" alt="생캐슈넛 (500g)" class="product_image">
                                 </div>
                                 <p class="product_name">생캐슈넛 (500g)</p>
                                 <p class="product_price">15,000원</p>
                                 <div class="tag_area">
-                                    <button class="tag tag_vegan">Vegan</button>
-                                    <button class="tag tag_organic">Organic</button>
+                                    <span class="tag tag_vegan">Vegan</span>
+                                    <span class="tag tag_organic">Organic</span>
                                 </div>
                             </a>
                         </div>
                         <div class="product_item">
                             <a href="product_detail.html" class="product_link">
                                 <div class="product_image_wrap">
-                                    <img src="images/index/product3.jpg" alt="" class="product_image">
+                                    <img src="images/index/product3.jpg" alt="커피 원두 (500g)" class="product_image">
                                 </div>
                                 <p class="product_name">커피 원두 (500g)</p>
                                 <p class="product_price">18,000원</p>
                                 <div class="tag_area">
-                                    <button class="tag tag_vegan">Vegan</button>
-                                    <button class="tag tag_nonGMO">Non-GMO</button>
+                                    <span class="tag tag_vegan">Vegan</span>
+                                    <span class="tag tag_nonGMO">Non-GMO</span>
                                 </div>
-                            </a>
-                            
+                            </a>   
                         </div>
                         <div class="product_item">
                             <a href="product_detail.html" class="product_link">
                                 <div class="product_image_wrap">
-                                    <img src="images/index/product4.jpg" alt="" class="product_image">
+                                    <img src="images/index/product4.jpg" alt="우드 트레이" class="product_image">
                                 </div>
                                 <p class="product_name">우드 트레이</p>
                                 <p class="product_price">28,000원</p>
                                 <div class="tag_area">
-                                    <button class="tag tag_organic">Organic</button>
+                                    <span class="tag tag_organic">Organic</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product_item">
+                            <a href="product_detail.html" class="product_link">
+                                <div class="product_image_wrap">
+                                    <img src="images/index/product5.jpg" alt="상품이미지" class="product_image">
+                                </div>
+                                <p class="product_name">우드 트레이</p>
+                                <p class="product_price">28,000원</p>
+                                <div class="tag_area">
+                                    <span class="tag tag_organic">Organic</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product_item">
+                            <a href="product_detail.html" class="product_link">
+                                <div class="product_image_wrap">
+                                    <img src="images/index/product6.jpg" alt="상품이미지" class="product_image">
+                                </div>
+                                <p class="product_name">우드 트레이</p>
+                                <p class="product_price">28,000원</p>
+                                <div class="tag_area">
+                                    <span class="tag tag_organic">Organic</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="product_item">
+                            <a href="product_detail.html" class="product_link">
+                                <div class="product_image_wrap">
+                                    <img src="images/index/product7.jpg" alt="상품이미지" class="product_image">
+                                </div>
+                                <p class="product_name">우드 트레이</p>
+                                <p class="product_price">28,000원</p>
+                                <div class="tag_area">
+                                    <span class="tag tag_organic">Organic</span>
                                 </div>
                             </a>
                         </div>
@@ -159,89 +190,91 @@
                     <div class="button_area">
                         <a href="/products.html" type="button" class="button newArrivals clrBtn ">SEE MORE</a>
                     </div>
+                    <!-- <div class="arrows arrows_newArrivals">
+                        <svg class="arrow left" viewBox="1 16.293 70 17.414"><path d="M 1 26 L 65.34849548339844 26 L 56.05778121948242 32.29299926757812 L 58.14535522460938 33.70700073242188 L 71 25 L 58.14535522460938 16.29299926757812 L 56.05778121948242 17.70699882507324 L 65.34849548339844 24 L 1 24 L 1 26 Z"></path></svg>
+                        <svg class="arrow right" viewBox="1 16.293 70 17.414">
+                        <path d="M 1 26 L 65.34849548339844 26 L 56.05778121948242 32.29299926757812 L 58.14535522460938 33.70700073242188 L 71 25 L 58.14535522460938 16.29299926757812 L 56.05778121948242 17.70699882507324 L 65.34849548339844 24 L 1 24 L 1 26 Z"></path></svg>
+                       
+                    </div> -->
                 </div>
                 <div class="product_list bestsellers" id="bestsellers">
                     <div class="bestsellers product_items_area">
                         <div class="product_item">
                             <a href="product_detail.html" class="product_link">
                                 <div class="product_image_wrap">
-                                    <img src="images/index/product1.jpg" alt="" class="product_image">
+                                    <img src="images/index/product5.jpg" alt="" class="product_image">
                                 </div>
                                 <p class="product_name">유기농 다크 초콜릿</p>
                                 <p class="product_price">9,000원</p>
                                 <div class="tag_area">
-                                    <button class="tag tag_vegan">Vegan</button>
-                                    <button class="tag tag_nonGMO">Non-GMO</button>
-                                    <button class="tag tag_organic">Organic</button>
+                                    <span class="tag tag_vegan">Vegan</span>
+                                    <span class="tag tag_nonGMO">Non-GMO</span>
+                                    <span class="tag tag_organic">Organic</span>
                                 </div>
                             </a>
                         </div>
                         <div class="product_item">
                             <a href="product_detail.html" class="product_link">
                                 <div class="product_image_wrap">
-                                    <img src="images/index/product1.jpg" alt="" class="product_image">
+                                    <img src="images/index/product6.jpg" alt="" class="product_image">
                                 </div>
                                 <p class="product_name">유기농 다크 초콜릿</p>
                                 <p class="product_price">9,000원</p>
                                 <div class="tag_area">
-                                    <button class="tag tag_vegan">Vegan</button>
-                                    <button class="tag tag_nonGMO">Non-GMO</button>
-                                    <button class="tag tag_organic">Organic</button>
+                                    <span class="tag tag_vegan">Vegan</span>
+                                    <span class="tag tag_nonGMO">Non-GMO</span>
+                                    <span class="tag tag_organic">Organic</span>
                                 </div>
                             </a>
                         </div>
                         <div class="product_item">
                             <a href="product_detail.html" class="product_link">
                                 <div class="product_image_wrap">
-                                    <img src="images/index/product1.jpg" alt="" class="product_image">
+                                    <img src="images/index/product7.jpg" alt="" class="product_image">
                                 </div>
                                 <p class="product_name">유기농 다크 초콜릿</p>
                                 <p class="product_price">9,000원</p>
                                 <div class="tag_area">
-                                    <button class="tag tag_vegan">Vegan</button>
-                                    <button class="tag tag_nonGMO">Non-GMO</button>
-                                    <button class="tag tag_organic">Organic</button>
+                                    <span class="tag tag_vegan">Vegan</span>
+                                    <span class="tag tag_nonGMO">Non-GMO</span>
+                                    <span class="tag tag_organic">Organic</span>
                                 </div>
                             </a>
                         </div>
                         <div class="product_item">
                             <a href="product_detail.html" class="product_link">
                                 <div class="product_image_wrap">
-                                    <img src="images/index/product1.jpg" alt="" class="product_image">
+                                    <img src="images/index/product8.jpg" alt="" class="product_image">
                                 </div>
                                 <p class="product_name">유기농 다크 초콜릿</p>
                                 <p class="product_price">9,000원</p>
                                 <div class="tag_area">
-                                    <button class="tag tag_vegan">Vegan</button>
-                                    <button class="tag tag_nonGMO">Non-GMO</button>
-                                    <button class="tag tag_organic">Organic</button>
+                                    <span class="tag tag_vegan">Vegan</span>
+                                    <span class="tag tag_nonGMO">Non-GMO</span>
+                                    <span class="tag tag_organic">Organic</span>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <button class="btn more">SEE MORE</button>
-                </div>
-                <div class="arrows">
-                    <!-- <a href="#" class="arrow left">
-                        <svg class="LEFT" viewBox="1 16.293 70 17.414"><path id="LEFT" d="M 1 26 L 65.34849548339844 26 L 56.05778121948242 32.29299926757812 L 58.14535522460938 33.70700073242188 L 71 25 L 58.14535522460938 16.29299926757812 L 56.05778121948242 17.70699882507324 L 65.34849548339844 24 L 1 24 L 1 26 Z"></path></svg>
-                    </a> -->
-                    <a href="#" class="arrow right">
-                        <svg class="RIGHT" viewBox="1 16.293 70 17.414">
-                        <path id="RIGHT" d="M 1 26 L 65.34849548339844 26 L 56.05778121948242 32.29299926757812 L 58.14535522460938 33.70700073242188 L 71 25 L 58.14535522460938 16.29299926757812 L 56.05778121948242 17.70699882507324 L 65.34849548339844 24 L 1 24 L 1 26 Z"></path></svg>
-                    </a>
+                    <!-- <a class="clrBtn" href="products.html#bestsellers">SEE MORE</button> -->
+                    <!-- <div class="arrows arrows_bestsellers">
+                        <svg class="arrow left" viewBox="1 16.293 70 17.414"><path d="M 1 26 L 65.34849548339844 26 L 56.05778121948242 32.29299926757812 L 58.14535522460938 33.70700073242188 L 71 25 L 58.14535522460938 16.29299926757812 L 56.05778121948242 17.70699882507324 L 65.34849548339844 24 L 1 24 L 1 26 Z"></path></svg>
+                        <svg class="arrow right" viewBox="1 16.293 70 17.414">
+                        <path d="M 1 26 L 65.34849548339844 26 L 56.05778121948242 32.29299926757812 L 58.14535522460938 33.70700073242188 L 71 25 L 58.14535522460938 16.29299926757812 L 56.05778121948242 17.70699882507324 L 65.34849548339844 24 L 1 24 L 1 26 Z"></path></svg>
+                    </div> -->
                 </div>
         </section>
 
         <!------------- ABOUT US SECTION ------------->
         <section class="section aboutUs_section">
             <div class="aboutUs image_area">
-                <img src="images/index/main_visual_1.jpg" alt="" class="aboutUs_img">
+                <img src="images/index/main_visual_1.jpg" alt="about Us" class="aboutUs_img">
             </div>
             <div class="aboutUs textbox">
                 <!-- <p class="tilte_eng">About Us</p> -->
                 <h3 class="tilte_kor">레스포어스는</h3>
                 <p class="desc">제로웨이스트는 숫자인 ‘0(제로)’와 쓰레기를 뜻하는 ‘waste’가 합쳐져, 쓰레기가 하나도 없게 만들자는 뜻을 가지고 있습니다. 일회용품 컵, 비닐봉지 등 썩지 않는 쓰레기를 줄여 쓰레기 생산을 최소화하자는 생활습관입니다. </p>
-                <button href="aboutus.html" class="clrRvsBtn">READ MORE</button>
+                <a href="aboutus.html" class="clrRvsBtn">READ MORE</a>
             </div>
             <div class="movingText">
                 <p>Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us. Produce Less. Use Less. Less for earth. Less for us.</p>
@@ -291,11 +324,11 @@
             </div>
             <div class="article_area">
                 <div class="article article1 left"> 
-                    <a href="blog_article.html">
+                    <a href="#">
                         <img src="images/index/blog1.jpg" alt="텀블러에 물 담기" class="article_image image_zoom">
                     </a>
                     <div class="article article_text_container">
-                        <a href="blog_article.html">
+                        <a href="#">
                             <p class="category article_category">NEWS</p>
                             <h3 class="article_title">텀블러 들고 식당 가면 식수 제공</h3>
                             <time datetime="2022-07-01" class="date article_date">2022-07-01</time>
@@ -303,11 +336,11 @@
                     </div>
                 </div>
                 <div class="article article2 right">
-                    <a href="blog_article.html">
+                    <a href="#">
                         <img src="images/index/blog2.jpg" alt="부산 비건 카페" class="article_image image_zoom">
                     </a>
                     <div class="article article_text_container">
-                        <a href="blog_article.html">
+                        <a href="#">
                             <p class="category article_category">VEGAN CAFE</p>
                             <h3 class="article_title">부산 광안리, 카페 소수</h3>
                             <time datetime="2022-07-01" class="date article_date">2022-07-01</time>
@@ -315,11 +348,11 @@
                     </div>
                 </div>
                 <div class="article article3 right">
-                    <a href="blog_article.html">
+                    <a href="#">
                         <img src="images/index/blog3.jpg" alt="기후 위기" class="article_image image_zoom">
                     </a>
                     <div class="article article_text_container">
-                        <a href="blog_article.html">
+                        <a href="#">
                             <p class="category article_category">INTERVIEW</p>
                             <h3 class="article_title">기후 변화가 아닌 기후 위기!</h3>
                             <time datetime="2022-07-01" class="date article_date">2022-07-01</time>
@@ -327,11 +360,11 @@
                     </div>
                 </div>
                 <div class="article article4 right">
-                    <a href="blog_article.html">
+                    <a href="#">
                         <img src="images/index/blog4.jpg" alt="회사" class="article_image image_zoom">
                     </a>
                     <div class="article article_text_container">
-                        <a href="blog_article.html">
+                        <a href="#">
                             <p class="category article_category">NEWS</p>
                             <h3 class="article_title">CJ제일제당, 유럽 시장공략 본격화</h3>
                             <time datetime="2022-07-01" class="date article_date">2022-07-01</time>
@@ -340,7 +373,7 @@
                 </div>
             </div>
             <div class="button_area">
-                <button href="blog.html" class="clrBtn">READ MORE</button>
+                <a href="#" class="clrBtn">READ MORE</a>
             </div>
         </section>
 
@@ -351,7 +384,7 @@
                     <!-- <p class="title_eng">NEWS</p> -->
                     <h3 class="title_kor">새소식</h3>
                 </div>
-                <button class="clrRvsBtn" href="news.html">READ MORE</button>
+                <a class="clrRvsBtn" href="#">READ MORE</a>
             </div>
             <div class="news_list">
                 <ul>
@@ -407,7 +440,7 @@
                 </div>
             </div>
             <div class="button_area">
-                <button class="clrBtn" href="#">@ FOLLOW</button>
+                <a class="clrBtn" href="#">@ FOLLOW</a>
             </div>
         </section>
 
@@ -416,7 +449,7 @@
             <h3>오프라인 매장 안내</h3>
             <p class="text store_text">지구를 위한, 사람을 위한 제로웨이스트샵 lessforus<br>
                 제로웨이스트가 일상 생활에 어떻게 스며들 수 있는지 한 눈에 확인할 수 있는 오프라인 매장에 방문해 보세요</p>
-            <button href="#" class="monoRvsBtn">READ MORE</button>
+            <a href="#" class="monoRvsBtn">READ MORE</a>
         </section>
 
         <!------------- CONTACT SECTION ------------->
@@ -465,8 +498,14 @@
                 <p class="desc">소식을 구독하고 첫 구매 시 10% 할인 받으세요!</p>
             </div>
             <div class="input subscribe_input">
-                <input type="email" name="email" id="email">
-                <button type="submit" class="clrBtn">SUBMIT</button>
+                <form class="subscribe_form">
+                    <input type="email" name="email" id="email" required>
+                    <p class="consent">
+                        <input type="checkbox" name="subscribe_consent" id="subscribe_consent" required>
+                        <label for="subscribe_consent">개인 정보 제공에 동의합니다.</label>
+                    </p>
+                    <button type="submit" class="clrBtn">SUBMIT</button>
+                </form>
             </div>
             <!-- <div class="consent"></div> -->
         </div>
@@ -498,6 +537,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
 </body>
-<script src="js/main.js"></script>
 </html>

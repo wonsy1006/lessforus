@@ -1,30 +1,3 @@
-/* NAVIGATION BANNER */
-.nav_banner_area {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 0.5rem auto;
-    background-color: #D2C2E5;
-}
-
-.nav_banner_area p {
-    font-size: 0.8rem;
-}
-
-.nav_banner_area a.close {
-    height: 16px;
-    position: absolute;
-    top: 7px;
-    right: 7px;
-}
-
-.bx-x:hover {
-    cursor: pointer;
-}
-
 
 /* ==================== WRAPPER ==================== */
 .wrapper {
@@ -42,12 +15,13 @@ section.mv_section {
 .mv_area {
     width: 100%;
     height: 100vh;
+    min-height: 790px;
     z-index: -100;
     display: flex;
     align-content: center;
     position: absolute;
     top: -113px;
-    background: url(../images/index/main_visual_3.jpg) no-repeat, rgba(0, 0, 0, 0.2);
+    background: url(../images/index/main_visual_3.jpg) no-repeat;
     background-size: cover;
 }
 
@@ -85,9 +59,9 @@ section.mv_section {
     box-sizing: content-box;
     padding: 3rem 0;
     width: 100%;
+    height: 750px;
     position: relative;
     margin-bottom: var(--mb-7);
-    background-color: var(--body-color);
 }
 
 /* 상품 탭 */
@@ -101,6 +75,7 @@ section.mv_section {
 .tab_title {
     width: 100%;
     border-bottom: 2px solid #CCC;
+    cursor: pointer;
 }
 
 .tab_title.active {
@@ -108,39 +83,16 @@ section.mv_section {
     border-bottom: 2px solid var(--main-color-dark);
 }
 
+.tab_title.active::before {
+    color: var(--main-color-dark);
+}
+
 .tab_title.newArrivals {
-    width: 100%;;
+    width: 100%;
 }
 
-.tab_title:hover{
+.tab_title:hover {
     border-bottom: 2px solid var(--main-color-dark);
-}
-
-.tab_title::before {
-    display: flex;
-    justify-content: center;
-    font-family: var(--accent-font);
-}
-
-.tab_title h3 {
-    text-align: center;
-}
-
-.tab_title h3 {
-    font-size: var(--normal-font-size);
-    font-weight: 400;
-}
-
-.tab_title.newArrivals h3 {
-    color: var(--main-color-dark);
-}
-
-.tab_title.bestsellers h3 {
-    color: var(--text-color-light);
-}
-
-.tab_title h3:hover {
-    color: var(--main-color-dark);
 }
 
 .tab_title.newArrivals::before {
@@ -153,18 +105,48 @@ section.mv_section {
     content: "Bestsellers";
     font-size: var(--h2-font-size);
     font-weight: 600;
+}
+
+.tab_title:hover > h3.title {
+    color: var(--main-color-dark);
+}
+
+.tab_title:hover ::before {
+    color: var(--main-color-dark);
+}
+
+.tab_title::before {
+    display: flex;
+    justify-content: center;
+    font-family: var(--accent-font);
+    color: var(--text-color-light);
+}
+
+.tab_title h3 {
+    text-align: center;
+    font-size: var(--normal-font-size);
+    font-weight: 400;
+}
+
+.tab_title.newArrivals h3 {
+    color: var(--main-color-dark);
+}
+
+.tab_title.bestsellers h3 {
     color: var(--text-color-light);
 }
 
 /* 상품 리스트 */
 .product_items_area {
+    width: 189.6vw;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
-    margin-bottom: var(--mb-5);
+    position: relative;
+    margin: 0 auto var(--mb-5);
 }
 
 .product_item {
-    width: 24%;
+    width: 23.7vw;
     margin: 0 var(--mb-1);
 }
 
@@ -189,8 +171,11 @@ section.mv_section {
     color: var(--main-color-dark);
 }
 
-.product_list.bestsellers {
-    display: none;
+.product_list {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+
 }
 
 /* 더 보기 버튼 */
@@ -208,7 +193,7 @@ a.button {
 /* ARROWS */
 .arrows {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     top: 45%;
 }
 
@@ -219,7 +204,7 @@ a.button {
 
 .arrow.right {
     position: absolute;
-    right: 5px;
+    right: 17px;
 }
 
 /* =========== ABOUT US SECTION =========== */
@@ -238,7 +223,7 @@ a.button {
     display: inline-block;
     height: 100vh;
     z-index: -100;
-    box-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 6px rgba(94, 78, 31, 0.823);
     border-radius: 0 3rem 3rem 0;
 }
 
@@ -268,7 +253,7 @@ a.button {
     background-color: var(--main-color-dark);
     z-index: 200;
     border-radius: 3rem 0 0 3rem;
-    box-shadow: 1px 1px 6px rgba(7, 27, 4, 0.757);
+    box-shadow: 0 1px 6px rgba(7, 27, 4, 0.815);
 }
 
 .textbox > h3 {
@@ -293,7 +278,7 @@ a.button {
 }
 
 .textbox .clrRvsBtn {
-    width: 15vw;
+    width: 90px;
 }
 
 .movingText {
@@ -343,7 +328,7 @@ a.button {
 }
 
 .card_area {
-    width: 85%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     margin: 0 auto var(--mb-3); 
@@ -359,14 +344,14 @@ a.button {
     padding: 2.5rem 2.5rem 1.5rem;
     margin: 0 1rem var(--mb-2) 1rem;
     background-color: #FFFAEF;
-    box-shadow: 0px 5px 5px rgba(80, 66, 36, 0.745);
+    box-shadow: 0px 5px 5px rgba(122, 107, 76, 0.745);
     border-radius: 0 3rem 0 0;
 }
 
 .card:hover {
     top: -10px;
     background-color: #fef8ec;
-    box-shadow: 0px 10px 10px rgba(80, 66, 36, 0.84);
+    box-shadow: 0px 10px 10px rgba(122, 107, 76, 0.84);
 }
 
 .mission_icon {
@@ -559,10 +544,11 @@ a.button {
 
 .news_list p.tag {
     padding: 0.4rem 1.5rem;
+    border: 0;
     border-radius: 0;
     font-size: 0.7rem;
     font-weight: 500;
-    background-color: var(--main-color-dark);
+    background-color: #424242;
     color: #fff;
 }
 
@@ -688,6 +674,7 @@ a.button {
 
 /* =========== CONTACT SECTION =========== */
 .contact_section {
+    width: 100%;
     display: flex;
     height: 270px;
 }
@@ -742,7 +729,7 @@ a.button {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: var(--h3-font-size);
+    font-size: var(--h4-font-size);
 }
 
 .contact.info dt {
@@ -757,6 +744,15 @@ a.button {
     display: flex;
     margin: .5rem auto;
     justify-content: space-around;
+}
+
+.snsIcons li:hover {
+    position: relative;
+    top: -10px;
+}
+
+.snsIcons li:hover i, .snsIcons li:hover span{
+    color: var(--main-color-dark);
 }
 
 .snsIcons a {
@@ -776,8 +772,8 @@ a.button {
     text-align: center;
 }
 
-.snsIcons i:hover {
+/* .snsIcons i:hover {
     font-size: 2.5rem;
-}
+} */
 
 

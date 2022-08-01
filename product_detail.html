@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/styles.css">
     <!-- BOXICON IMPORT -->
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
@@ -16,10 +16,16 @@
     <!---------------------------- HEADER ---------------------------->
     <!---------------------------------------------------------------->
 
-     <!-- SCROLL TOP -->
-     <a href="#" class="scrolltop" id="scroll-top">
+    <!-- SCROLL TOP -->
+    <a href="#" class="scrolltop" id="scroll-top">
         <i class='bx bxs-chevron-up-circle'></i>
     </a>
+
+    <!-- NAVIGATION BANNER -->
+    <div class="nav_banner_area">
+        <p class="change_banner_text">50,000원 이상 구매 시 무료 배송!</p>
+        <a class="close" onclick="closeNavBanner();"><i class='bx bx-x' onclick="closeNavBanner();"></i></a>
+    </div>
 
     <!-- HEADER -->
     <header id="header">
@@ -30,16 +36,16 @@
     
         <!-- LOGO AREA -->
         <div class="logo_area">
-            <h1 class="logo"><a href="index.html"><span id="logo_less">less</span>for<span id="logo_us">us</span></a></h1>
+            <h1 class="logo"><a href="index.html">Lessforus</a></h1>
         </div>
         
         <!-- NAVIGATION -->
         <nav id="nav">
             <ul class="nav_list">
-                <li><a href="aboutus.html" class="nav_link">ABOUT US</a></li>
+                <li><a href="#" class="nav_link">ABOUT US</a></li>
                 <li><a href="products.html" class="nav_link">PRODUCTS</a>
                     <!-- <i class='bx bx-plus open_sublist'></i> -->
-                    <ul class="products_list">
+                    <!-- <ul class="products_list">
                         <li><a href="products.html#top" class="nav_link">전체</a></li>
                         <li><a href="#" class="nav_link">욕실</a></li>
                         <li><a href="#" class="nav_link">주방</a></li>
@@ -47,7 +53,7 @@
                         <li><a href="#" class="nav_link">생활</a></li>
                         <li><a href="#" class="nav_link">식품</a></li>
                         <li><a href="#" class="nav_link">기타</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li><a href="blog.html" class="nav_link">BLOG</a></li>
                 <li><a href="news.html" class="nav_link">NEWS</a></li>
@@ -66,10 +72,140 @@
     <!------------------------------ CONTENTS ------------------------------>
     <!---------------------------------------------------------------------->
     <div class="wrapper">
+        <section class="product_detail_section">
+            <!-- Product Image -->
+            <div class="product_detail_image_area">
+                <img class="product_detail_image" src="images/index/product1.jpg" alt="">
+                <div class="thumbnail_area">
+                    <img class="thumbnail thumbnail1" src="images/index/product2.jpg" alt="">
+                    <img class="thumbnail thumbnail2" src="images/index/product3.jpg" alt="">
+                    <img class="thumbnail thumbnail3" src="images/index/product4.jpg" alt="">
+                </div>
+                <svg class="arrow left" viewBox="1 16.293 70 17.414"><path id="LEFT" d="M 1 26 L 65.34849548339844 26 L 56.05778121948242 32.29299926757812 L 58.14535522460938 33.70700073242188 L 71 25 L 58.14535522460938 16.29299926757812 L 56.05778121948242 17.70699882507324 L 65.34849548339844 24 L 1 24 L 1 26 Z"></path></svg>
+            </div>
 
+            <!-- Product Description -->
+            <div class="product_detail_area">
+                <!-- Title & Description -->
+                <div class="product_desc_area">
+                    <h2 class="product_title">오리지널 고체 치약</h2>
+                    <p class="product_price">15,000원</p>
+                    <p class="product_desc">제로웨이스트는 숫자인 ‘0(제로)’와 쓰레기를 뜻하는 ‘waste’가 합쳐져, 쓰레기가 하나도 없게 만들자는 뜻을 가지고 있습니다. 일회용품 컵, 비닐봉지 등 썩지 않는 쓰레기를 줄여 쓰레기 생산을 최소화하자는 생활습관입니다. </p>
+                </div>
+                <!-- Review -->
+                <div class="product_review_area">
+                    <p class="stars"> ★ ★ ★ ★ ☆ </p>
+                    <span class="review_count">(28)</span>
+                    <a href="#" class="more_review">후기 더 보기</a>
+                </div>
+                <!-- Choice -->
+                <div class="choice_area">
+                    <div class="capacity_area">
+                        <h4>용량 선택</h4>
+                        <label for="50ea" class="capacityLabel">
+                            <input type="radio" id="50ea" name="capacity">
+                            <span>50정</span>
+                        </label>
+                        <label for="150ea" class="capacityLabel">
+                            <input type="radio" id="150ea" name="capacity">
+                            <span>150정</span>
+                        </label>
+                        <label for="400ea" class="capacityLabel">
+                            <input type="radio" id="400ea" name="capacity">
+                            <span>400정</span>
+                        </label>
+                    </div>
+                    <div class="color_area">
+                        <h4>색상 선택</h4>
+                        <label for="orange" class="colorLabel">
+                            <input type="radio" id="orange" name="color">
+                            <span></span>
+                        </label>
+                        <label for="green" class="colorLabel">
+                            <input type="radio" id="green" name="color">
+                            <span></span>
+                        </label>
+                        <label for="blue" class="colorLabel">
+                            <input type="radio" id="blue" name="color">
+                            <span></span>
+                        </label>
+                    </div>
+                    <div class="quantity_area">
+                        <h4>수량 선택</h4>
+                        <span class="control minus"><i class='bx bx-minus'></i></span>
+                        <span class="quantity"> 1 </span>
+                        <span class="control plus"><i class='bx bx-plus'></i></span>
+                    </div>
+                </div>
+                <div class="choice_check_area">
+                    <span class="check capacity">1</span>
+                    <span class="check color">1</span>
+                    <span class="check quantity">1</span>
+                    <span class="check price">15,000</span>
+                </div>
+                <div class="button_area">
+                    <a href="#" class="clrRvsBtn">구매하기</a>
+                    <a href="#" class="clrBtn">장바구니</a>
+                    <a href="#" class="clrBtn">♡ 3</a>
+                </div>
+            </div>
+        </section>
+        <section class="related_products_section">
+            <h3 class="title">관련 상품</h3>
+            <div class="related_products_list">
+                <a href="" class="related_product related_product1">
+                    <div class="related_product_image_wrap">
+                        <img src="images/index/product1.jpg" alt="" class="related_product_image">
+                    </div>
+                    <p class="related_product_name">유기농 다크 초콜릿</p>
+                    <p class="related_product_price">9,000원</p>
+                    <div class="tag_area">
+                        <button class="tag tag_vegan">Vegan</button>
+                        <button class="tag tag_nonGMO">Non-GMO</button>
+                        <button class="tag tag_organic">Organic</button>
+                    </div>
+                </a>
+                <a href="" class="related_product related_product2">
+                    <div class="related_product_image_wrap">
+                        <img src="images/index/product2.jpg" alt="" class="related_product_image">
+                    </div>
+                    <p class="related_product_name">유기농 다크 초콜릿</p>
+                    <p class="related_product_price">9,000원</p>
+                    <div class="tag_area">
+                        <button class="tag tag_vegan">Vegan</button>
+                        <button class="tag tag_nonGMO">Non-GMO</button>
+                        <button class="tag tag_organic">Organic</button>
+                    </div>
+                </a>
+                <a href="" class="related_product related_product3">
+                    <div class="related_product_image_wrap">
+                        <img src="images/index/product3.jpg" alt="" class="related_product_image">
+                    </div>
+                    <p class="related_product_name">유기농 다크 초콜릿</p>
+                    <p class="related_product_price">9,000원</p>
+                    <div class="tag_area">
+                        <button class="tag tag_vegan">Vegan</button>
+                        <button class="tag tag_nonGMO">Non-GMO</button>
+                        <button class="tag tag_organic">Organic</button>
+                    </div>
+                </a>
+                <a href="" class="related_product related_product4">
+                    <div class="related_product_image_wrap">
+                        <img src="images/index/product4.jpg" alt="" class="related_product_image">
+                    </div>
+                    <p class="related_product_name">유기농 다크 초콜릿</p>
+                    <p class="related_product_price">9,000원</p>
+                    <div class="tag_area">
+                        <button class="tag tag_vegan">Vegan</button>
+                        <button class="tag tag_nonGMO">Non-GMO</button>
+                        <button class="tag tag_organic">Organic</button>
+                    </div>
+                </a>
+            </div>
+        </section>
     </div>
 
-    <!------------------------------ FOOTER ------------------------------>
+        <!------------------------------ FOOTER ------------------------------>
     <!-------------------------------------------------------------------->
     <footer id="footer">
         <!-- SUBSCRIBE AREA -->
@@ -80,8 +216,14 @@
                 <p class="desc">소식을 구독하고 첫 구매 시 10% 할인 받으세요!</p>
             </div>
             <div class="input subscribe_input">
-                <input type="email" name="email" id="email">
-                <button type="submit" class="clrBtn">SUBMIT</button>
+                <form class="subscribe_form">
+                    <input type="email" name="email" id="email" required>
+                    <p class="consent">
+                        <input type="checkbox" name="subscribe_consent" id="subscribe_consent" required>
+                        <label for="subscribe_consent">개인 정보 제공에 동의합니다.</label>
+                    </p>
+                    <button type="submit" class="clrBtn">SUBMIT</button>
+                </form>
             </div>
             <!-- <div class="consent"></div> -->
         </div>
@@ -113,5 +255,6 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
