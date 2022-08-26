@@ -1,43 +1,22 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-5591JXPQGD"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-5591JXPQGD");
-    </script>
-    <!-- BOXICON IMPORT -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!-- SCROLL REVEAL IMPORT -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <title>Login | lessforus</title>
+    <title>lessforus | 404 Not Found</title>
   </head>
   <body>
-    <!---------------------------- HEADER ---------------------------->
-    <!---------------------------------------------------------------->
-
     <!-- SCROLL TOP -->
     <a href="#" class="scrolltop" id="scroll-top">
       <i class="bx bxs-chevron-up-circle scrolltop_icon"></i>
     </a>
+
+    <!-- NAVIGATION BANNER -->
+    <div class="nav_banner_area">
+      <p class="change_banner_text">50,000원 이상 구매 시 무료 배송!</p>
+      <a class="close"><i class="bx bx-x"></i></a>
+    </div>
 
     <!-- HEADER -->
     <header id="header">
@@ -48,13 +27,13 @@
 
       <!-- LOGO AREA -->
       <div class="logo_area">
-        <h1 class="logo"><a href="index.html">Lessforus</a></h1>
+        <h1 class="logo"><a href="#">Lessforus</a></h1>
       </div>
 
       <!-- NAVIGATION -->
       <nav id="nav">
         <ul class="nav_list">
-          <li><a href="#" class="nav_link">ABOUT US</a></li>
+          <li><a href="aboutus.html" class="nav_link">ABOUT US</a></li>
           <li>
             <a href="products.html" class="nav_link">PRODUCTS</a>
             <!-- <i class='bx bx-plus open_sublist'></i> -->
@@ -68,9 +47,9 @@
                         <li><a href="#" class="nav_link">기타</a></li>
                     </ul> -->
           </li>
-          <li><a href="blog.html" class="nav_link">BLOG</a></li>
-          <li><a href="news.html" class="nav_link">NEWS</a></li>
-          <li><a href="contact.html" class="nav_link">CONTACT</a></li>
+          <li><a href="#" class="nav_link">BLOG</a></li>
+          <li><a href="#" class="nav_link">NEWS</a></li>
+          <li><a href="#" class="nav_link">CONTACT</a></li>
         </ul>
       </nav>
       <!-- SHOPPING ICONS -->
@@ -80,84 +59,11 @@
             <a href="login.html" class="mypage"><i class="bx bxs-user"></i></a>
           </li>
           <li>
-            <a href="cart.html" class="cart"><i class="bx bxs-cart"></i></a>
+            <a href="#" class="cart"><i class="bx bxs-cart"></i></a>
           </li>
         </ul>
       </div>
     </header>
-
-    <!------------------------------ CONTENTS ------------------------------>
-    <!---------------------------------------------------------------------->
-    <div class="wrapper login">
-      <!-- 이미지 -->
-      <section class="login_image">
-        <!-- <img src="images/login/login2.jpg" alt=""> -->
-      </section>
-      <section id="login">
-        <section class="title_section login">
-          <h1 class="login_title">로그인</h1>
-        </section>
-        <div class="login_tab">
-          <div class="tab tab_member active">
-            <h2>회원</h2>
-          </div>
-          <div class="tab tab_guest">
-            <h2>비회원</h2>
-          </div>
-        </div>
-        <div class="login_area">
-          <div class="member_login active">
-            <form class="form_login member">
-              <p class="input_id">
-                <label for="id">아이디</label>
-                <input type="text" name="id" id="id" size="25" required />
-              </p>
-              <p class="input_password">
-                <label for="password">비밀번호</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  size="25"
-                  required
-                />
-              </p>
-              <p class="input_autoLogin">
-                <input type="checkbox" name="autoLogin" id="autoLogin" />
-                <label>로그인 상태 유지</label>
-              </p>
-              <button type="submit" class="clrBtn loginBtn">로그인</button>
-            </form>
-          </div>
-          <div class="guest_login">
-            <form class="form_login guest">
-              <p>
-                <label for="orderNo">주문번호</label>
-                <input
-                  type="text"
-                  name="orderNo"
-                  id="orderNo"
-                  size="25"
-                  required
-                />
-              </p>
-              <p>
-                <label for="tel">연락처</label>
-                <input type="text" name="tel" id="tel" size="25" required />
-              </p>
-              <button type="submit" class="clrBtn loginBtn">로그인</button>
-            </form>
-          </div>
-        </div>
-        <div class="memberInfo">
-          <ul>
-            <li><a href="join2.html" class="link_join">회원가입</a></li>
-            <li><a href="#" class="link_findID">아이디 찾기</a></li>
-            <li><a href="#" class="link_findPassword">비밀번호 찾기</a></li>
-          </ul>
-        </div>
-      </section>
-    </div>
 
     <!------------------------------ FOOTER ------------------------------>
     <!-------------------------------------------------------------------->
@@ -220,6 +126,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- SCRIPT -->
     <script src="js/main.js"></script>
   </body>
 </html>
